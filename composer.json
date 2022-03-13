@@ -1,0 +1,16 @@
+{
+    "require": {
+        "doctrine/orm": "^2.11.0",
+        "doctrine/dbal": "^3.2",
+        "doctrine/annotations": "1.13.2",
+        "symfony/yaml": "^5.4",
+        "symfony/cache": "^5.4",
+        "symfony/orm-pack": "^2.2"
+    },
+    "autoload": {
+        "psr-0": {"": "src/"}
+    },
+    "require-dev": {
+        "symfony/maker-bundle": "^1.38"
+    }
+}

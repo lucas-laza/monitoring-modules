@@ -1,0 +1,158 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    display: grid;
+}
+
+/* ### accueil ### */
+
+.titre{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 1vw;
+}
+
+.titre h1{
+    margin: 0;
+}
+
+.grille{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: calc(0.1rem + 2vmin);
+
+    margin: 5vh 1vw;
+}
+
+.module{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border: rgba(53, 49, 48, 0.404) 3px solid;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.1s;
+}
+
+.module h2{
+    font-size: calc(0.8rem + 50%);
+}
+
+.module *{
+    margin: 0;
+}
+
+.module:hover{
+    transition: 0.25s;
+    transform: scale(1.035);
+}
+
+.etat0{
+    background-color: rgb(245, 113, 90);
+}
+
+.etat1{
+    background-color: rgb(255, 200, 50);
+}
+
+.etat2{
+    background-color: rgb(102, 196, 93);
+}
+
+.top{
+    margin: 2vh 1vw;
+}
+
+/* ### historique module avec sessions ### */
+
+.session{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border: rgba(53, 49, 48, 0.404) 3px solid;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: 0.1s;
+}
+
+.setat0{
+    background-color: rgb(180, 180, 180); 
+}
+
+.setat2{
+    background-color: antiquewhite;
+}
+
+/* ### Historique session avec tableau et graphique ### */
+
+.legraph{
+    height: 75vh;
+}
+
+.ct-label.ct-label.ct-horizontal.ct-end {
+    position: relative;
+    justify-content: flex-end;
+    text-align: right;
+    transform-origin: 100% 0;
+    transform: translate(-100%) rotate(-45deg);
+    white-space:nowrap;
+    font-size: calc(0.3rem + 1vmin);
+  }
+
+.ct-series .ct-label{
+    font-size: calc(0.25rem + 2.5vmin);
+    fill: rgba(0, 0, 0, 0.815);
+    font-weight: bold;
+}
+
+.legraph .ct-series-a .ct-line {
+    /* Set the colour of this series line */
+    stroke: #363836;
+    /* Control the thikness of your lines */
+    stroke-width: calc(1px + 0.3vw);
+    
+  }
+
+.legraph .ct-series-a .ct-point{
+    stroke: #ffa600;
+    stroke-width: calc(5px + 0.7vw);
+    stroke-linecap: square;
+}
+
+.supprS{
+    align-self: center;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .grille{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+}
+
+@media screen and (max-width: 1024px) {
+    .grille{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .grille{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
